@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/spacing_medium">
+
+    <TextView
+        android:id="@+id/txt_debug_output"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/spacing_normal"
+        android:background="@drawable/rounded_corner"
+        android:gravity="bottom"
+        android:padding="@dimen/spacing_normal"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_test_latest"
+        tools:text="Unbinding All\nDeleting Caches\nInit RxJava DataTier" />
+
+    <Button
+        android:id="@+id/btn_delete_caches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/debug_delete_caches"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_restart_app"
+        app:layout_constraintTop_toTopOf="@+id/btn_restart_app" />
+
+    <Button
+        android:id="@+id/btn_restart_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:text="@string/debug_restart_app"
+        app:layout_constraintEnd_toStartOf="@+id/btn_delete_caches"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_test_upcoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upcoming"
+        app:layout_constraintEnd_toStartOf="@+id/btn_test_latest"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_test_title" />
+
+    <Button
+        android:id="@+id/btn_test_latest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latest"
+        app:layout_constraintEnd_toStartOf="@+id/btn_test_past"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_test_upcoming"
+        app:layout_constraintTop_toTopOf="@+id/btn_test_upcoming" />
+
+    <Button
+        android:id="@+id/btn_test_past"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Past"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_test_latest"
+        app:layout_constraintTop_toTopOf="@+id/btn_test_latest" />
+
+    <TextView
+        android:id="@+id/txt_test_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="24dp"
+        android:text="Data Call Test:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_restart_app" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,51 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        android_material = "1.6.1"
+        androidx_core = "1.8.0"
+        androidx_compat = "1.4.2"
+        androidx_constraint = "2.1.2"
+        androidx_rv = "1.2.1"
+        coil_compose = "2.1.0"
+        compose = "1.2.0"
+        flipper = "0.71.0"
+        kotlin = "1.7.0"
+        kotlin_room = "2.4.3"
+        lifecycle = "2.5.1"
+        material_compose = "1.1.16"
+        navigation = "2.5.1"
+        okhttp3 = "4.8.1"
+        picasso = "2.8"
+        retrofit = "2.9.0"
+        rxjava = "2.2.18"
+        rxjava_android = "2.0.2"
+        soloader = "0.9.0"
+        test_junit = "4.13.2"
+        test_core = "1.4.0"
+        test_arch = "2.1.0"
+        test_ktx = "1.1.3"
+        test_truth = "1.4.0"
+        test_robolectric = "4.8"
+        test_mockk = "1.10.0"
+        test_coroutines = "1.4.2"
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.1.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
